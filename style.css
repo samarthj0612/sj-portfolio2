@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "made bon voyage";
+  src: url("./fonts/MADEBONVOYAGE\ 400.OTF");
+}
+@font-face {
+  font-family: "bigilla";
+  src: url("./fonts/BIGILLA.OTF");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(250, 250, 248);
+}
+#sj-main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#cursor {
+  position: fixed;
+  z-index: 999999;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  display: none;
+}
+#cover {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  /* z-index: inherit; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  z-index: 9999;
+}
+#cover #band {
+  height: 100%;
+  width: 20%;
+  border: 1px solid rgba(255, 255, 255, 0.122);
+  background-color: black;
+}
+#cover #content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+#cover #content div {
+  height: 0;
+  width: 50%;
+  border: 1px solid white;
+  background-color: white;
+}
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(250, 250, 248);
+  overflow: hidden;
+}
+#main1 #content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  cursor: none;
+  user-select: none;
+  /* border: 1px solid black; */;
+}
+#main1 #content h1 {
+  position: relative;
+  width: 100%;
+  font-size: 10vw !important;
+  font-family: "made bon voyage";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#main1 #content h1 > div {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#main1 #content h1 > div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+#main1 #nav {
+  position: fixed;
+  top: -30px;
+  width: 100%;
+  padding: 20px 50px;
+  z-index: 9998;
+  background-color: rgba(250, 250, 248, 0.473);
+  backdrop-filter: blur(5px);
+  border-radius: 0px 0px 30% 30%;
+  transition: all 0.5s;
+  opacity: 0;
+}
+#main1 #nav #links a {
+  text-decoration: none;
+  color: black;
+  margin: 0px 20px;
+  font-size: 18px;
+}
+#main1 #nav i {
+  margin: 5px;
+}
+#main2 #content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  width: 28%;
+  border: 1px solid black;
+  border-radius: 46%;
+  background-image: url(./images/sj-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-x: 30%;
+  background-position-y: 0%;
+}
+#main2 #content span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#main2 #content #contact {
+  position: absolute;
+  top: 5%;
+  left: -90%;
+  display: flex;
+  flex-direction: column;
+}
+#main2 #content #education {
+  position: absolute;
+  bottom: 10%;
+  left: -90%;
+  display: flex;
+  flex-direction: column;
+}
+#main2 #content #skill {
+  position: absolute;
+  top: 5%;
+  right: -70%;
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+}
+#skillBand {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.441);
+  height: 35vh;
+  margin: 10vh 0px;
+}
+#skillBand div {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  gap: 50px;
+  height: 100%;
+}
+#skillBand div img {
+  height: 100%;
+}
+#main3{
+  height: 85vh;
+}
+#main3 #content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0%, -50%);
+  width: 40%;
+  font-size: 3vw;
+}
+#main3 #content div {
+  position: absolute;
+  top: 50%;
+  right: -80%;
+  transform: translate(0%, -50%) rotate(-50deg);
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  height: 400px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#main3 #content div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#main4 {
+  height: initial;
+}
+#main4 span {
+  font-family: "bigilla";
+  font-size: 6vw;
+  cursor: pointer;
+}
+#main4 span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: black;
+  transition: width 0.8s;
+  margin: 0 auto;
+}
+#main4 span:hover::after {
+  width: 30%;
+}
+#main4 .project {
+  height: 50vh;
+  width: 600px;
+  border: 1px solid black;
+  margin: 3%;
+  clear: both;
+  overflow: hidden;
+}
+#main4 .project img{
+  height: 100%;
+  width: 100%;
+  transform-origin: 50% 50%;
+  object-fit: cover;
+}
+#main4 .project img:hover{
+  transform: scale(1.3);
+  cursor: pointer;
+  transition: all 0.8s;
+}
+#main5 {
+  height: initial;
+}
+#main5 span {
+  font-family: "bigilla";
+  font-size: 6vw;
+  cursor: pointer;
+}
+#main5 span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: black;
+  transition: width 0.8s;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+#main5 span:hover::after {
+  width: 35%;
+}
+#main5 #content{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 60px;
+  font-size: 1.5vw;
+}
+#main5 .row{
+  border-bottom: 1px solid transparent;
+  padding: 20px 50px;
+}
+#main5 .row:hover{
+  border-bottom: 1.5px solid black;
+  cursor: pointer;
+ transition: all 0.8s;
+}
+#main6{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main6 h1 {
+  font-family: "bigilla";
+  font-size: 4.5vw;
+  cursor: pointer;
+}
+#main6 h1::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.8s;
+  margin: 0 auto;
+}
+#main6 h1:hover::after {
+  width: 100%;
+}
+#main6 form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#main6 form input, #main6 form textarea{
+  padding:5px 10px;
+  outline: none;
+  resize: none;
+  border-radius: 10px;
+}
